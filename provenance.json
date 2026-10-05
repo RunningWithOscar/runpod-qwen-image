@@ -1,0 +1,9 @@
+{
+  "repo": "JonathanColetti/Qwen3.8-27B-Uncensored-GGUF",
+  "revision": "45d0fc0ad6cfcf9eeee6008ddaea925536409b18",
+  "file": "Qwen3.8-27B-Uncensored-Q4_K_M.gguf",
+  "bytes": 16810714528,
+  "sha256": "4c5e2db039e9325ac7724c8846c71356a24ad1cdfa28002d73ecb6be645f9675",
+  "image": "ghcr.io/ggml-org/llama.cpp@sha256:e8318a7b3988f9ca57b28c03486569e60def08f2b7b060550ebfa046e175e6cb",
+  "context": 8192
+}

@@ -1,0 +1,7 @@
+*
+!Dockerfile
+!bootstrap.sh
+!server.sh
+!benchmark.py
+!download.sh
+!provenance.json

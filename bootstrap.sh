@@ -66,6 +66,7 @@ fi
 echo 'Loading the model onto the GPU.'
 fi
 # Explicit full offload is enforced by server.sh.
+: "${LLAMA_API_KEY:?Set LLAMA_API_KEY at runtime}"
 if [ -n "${SERVER_SCRIPT:-}" ]; then printf '%s' "$SERVER_SCRIPT" > /tmp/server.sh; fi
 server_script=${SERVER_PATH:-/tmp/server.sh}
 if [ "${BENCHMARK:-0}" = 1 ]; then

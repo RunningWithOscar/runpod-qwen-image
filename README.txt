@@ -8,7 +8,8 @@ Startup verifies all shards; llama.cpp loads the entire model from the first sha
 Runtime: pass LLAMA_API_KEY as an environment variable. Never pass provider or inference keys during build.
 Expose port 8080. Default context 8192, full GPU offload required, 24GB GPU recommended.
 Set BENCHMARK=1 to compare baseline / fused MTP one-token / fused MTP two-token before serving.
-Set SPEC_DRAFT_N_MAX=1 or 2 to enable MTP without benchmarking.
+Two-token fused MTP is the default, measured on RTX 4090 at 91.79 tokens/sec versus 47.79 baseline.
+Set SPEC_DRAFT_N_MAX=0 to disable MTP, or 1 to draft one token.
 
 The Docker build context is allowlisted. It contains no .env, deployment state or user account metadata.
 GitHub Actions authentication happens at the registry login step, outside the Docker build.

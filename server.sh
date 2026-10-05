@@ -37,4 +37,11 @@ if ! kill -0 "$server_pid" 2>/dev/null; then
     cat "$model_dir/server.log"
     exit 1
 fi
-wait "$server_pid"
+if wait "$server_pid"; then
+    exit 0
+else
+    status=$?
+    echo 'INFERENCE_SERVER_EXITED'
+    tail -n 200 "$model_dir/server.log"
+    exit "$status"
+fi

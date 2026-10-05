@@ -13,7 +13,7 @@ Set SPEC_DRAFT_N_MAX=0 to disable MTP, or 1 to draft one token.
 
 The Docker build context is allowlisted. It contains no .env, deployment state or user account metadata.
 GitHub Actions authentication happens at the registry login step, outside the Docker build.
-On first publish, GHCR package visibility must be changed to Public to allow anonymous RunPod pulls.
+This package is Public; anonymous manifest and model-layer access were verified.
 
 A cached image can reduce startup time. On a cache miss, the host must still download ~17GB of weights.
 No claim is made that RunPod image-pull time is free. Use zero persistent volumes and terminate the pod
